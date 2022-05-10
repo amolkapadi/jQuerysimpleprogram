@@ -1,0 +1,39 @@
+<!--Write a jQuery code to disable the submit button until the visitor has clicked a
+check box.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>
+		Disable/enable the form submit button
+	</title>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	
+</head>
+<style>
+    #button-a{
+        
+        height: 50px;
+        width: 100px;
+    }
+</style>
+<body><center>
+	<h1> Click on checkbox button Will be Disabled</h1>
+    <input type="checkbox" id="checkbox-a" />
+     <input type="button" id="button-a" value="OK" /></center>
+	<script>
+		  $('#checkbox-a').click(function() {
+        if ($(this).is(':checked')) {
+            $('#button-a').attr('disabled', 'disabled');
+        } else {
+            $('#button-a').removeAttr('disabled');
+        }
+    });
+	</script>
+</body>
+
+</html>
